@@ -16,6 +16,7 @@ const Signin = () => {
 
   const submitButton: SubmitButtonInterface<IdentifierPassword> = {
     label: 'Login',
+    type: 'submit',
     func: (values) => LoginUser(values as IdentifierPassword, queryClient, setAccessToken),
   }
 

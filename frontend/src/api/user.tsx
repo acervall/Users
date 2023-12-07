@@ -12,7 +12,7 @@ export const GetUser = async (): Promise<UserSettings> => {
         Authorization: `Bearer ${accessToken}`,
       },
     })
-
+    console.log(data)
     return data
   } catch (error) {
     console.error('Error logging in:', error)
@@ -41,6 +41,7 @@ export const LoginUser = async (
     throw new Error('Error logging in')
   }
 }
+
 export const SignupUser = async (
   user: NewUser,
   queryClient: QueryClient,

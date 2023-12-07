@@ -73,6 +73,7 @@ export interface Field {
 
 export interface SubmitButtonInterface<T> {
   label: string
+  type: 'submit' | 'button' | 'reset'
   func: (values: T) => void
 }
 

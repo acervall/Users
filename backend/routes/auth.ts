@@ -38,14 +38,14 @@ router.get(
       const id = payload.userId
 
       const result = await client.query(
-        'SELECT u.*, us.* FROM users u INNER JOIN user_settings us ON u.id = us.user_id WHERE u.id = $1',
+        'SELECT u.id as user_id, u.username, u.email, u.first_name, u.last_name, us.opacity, us.background_color FROM users u INNER JOIN user_settings us ON u.id = us.user_id WHERE u.id = $1',
         [id],
       )
       const user = result.rows[0]
 
       if (user) {
         response.json({
-          id: user.id,
+          id: user.user_id,
           username: user.username,
           email: user.email,
           first_name: user.first_name,

@@ -55,6 +55,7 @@ const EditProfile = () => {
 
     const submitButton: SubmitButtonInterface<User> = {
       label: 'Save changes',
+      type: 'submit',
       func: (values) => EditUser(values as User, queryClient),
     }
 

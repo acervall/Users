@@ -19,6 +19,7 @@ const Signup = () => {
 
   const submitButton: SubmitButtonInterface<NewUser> = {
     label: 'Signup',
+    type: 'submit',
     func: (values) => SignupUser(values as NewUser, queryClient, setAccessToken),
   }
 

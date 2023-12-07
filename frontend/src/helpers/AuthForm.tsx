@@ -38,7 +38,7 @@ const AuthForm = <T,>({ fields, submitButton }: AuthFormProps<T>) => {
           ),
       )}
 
-      <SubmitButton>{submitButton.label}</SubmitButton>
+      <SubmitButton type={submitButton.type}>{submitButton.label}</SubmitButton>
     </StyledForm>
   )
 }
